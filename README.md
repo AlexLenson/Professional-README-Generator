@@ -1,4 +1,4 @@
-# ? Professional README Generator
+# Professional README Generator
 
 ## Description
 Application generats a README using nodejs
@@ -16,7 +16,7 @@ Application generats a README using nodejs
 No installation instructions
 
 ## Usage
-Follow prompts and enter information to generate readme
+Follow prompts and enter information to generate README
 
 ## Contributing
 Anyone can contribute
