@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const generateREADME = ({ title, location, github, linkedin }) =>
+const generateREADME = ({ title, description, install, usage, contribution, test, license, username, profile, email }) =>
 `# ${title}
 
 ## Description
@@ -33,7 +33,7 @@ ${test}
 Project is covered under the ${license} license
 
 ## Questions
-Direct any quetsions to ${username} at ${profile}
+Direct any quetsions to ${username} at ${profile}.
 For additional questions, email me at ${email}
 
 ## Video Demonstration
@@ -43,39 +43,56 @@ inquirer
     .prompt([
         {
             type: 'input',
-            name: 'name',
-            message: 'What is your name?',
+            name: 'title',
+            message: 'What is the title of your project?',
         },
         {
             type: 'input',
-            name: 'location',
-            message: 'Where are you from?',
+            name: 'description',
+            message: 'What is the description of your project?',
         },
         {
             type: 'input',
-            name: 'hobby',
-            message: 'What is your favorite hobby?',
+            name: 'install',
+            message: 'What are the installation instructions of your project?',
         },
         {
             type: 'input',
-            name: 'food',
-            message: 'What is your favorite food?',
+            name: 'usage',
+            message: 'What is the usage information of your project?',
         },
         {
             type: 'input',
-            name: 'github',
-            message: 'Enter your GitHub Username',
+            name: 'contribution',
+            message: 'What are the contribution guidelines of your project?',
         },
         {
             type: 'input',
-            name: 'linkedin',
-            message: 'Enter your LinkedIn URL.',
+            name: 'test',
+            message: 'What are the test instructions of your project?',
+        },
+        {
+            type: 'input',
+            name: 'license',
+            message: 'What is the license for your project?',
+            choices: ['Red', 'Blue', 'Green', 'Yellow', 'Purple', 'Orange'],
+
+        },
+        {
+            type: 'input',
+            name: 'username',
+            message: 'What is your GitHub username?',
+        },
+        {
+            type: 'input',
+            name: 'email',
+            message: 'What is your email address?',
         },
     ])
     .then((answers) => {
-        const htmlPageContent = generateHTML(answers);
+        const readmeContent = generateREADME(answers);
 
-        fs.writeFile('index.html', htmlPageContent, (err) =>
-            err ? console.log(err) : console.log('Successfully created index.html!')
+        fs.writeFile('README.md', readmeContent, (err) =>
+            err ? console.log(err) : console.log('Successfully created README.md!')
         );
     });
