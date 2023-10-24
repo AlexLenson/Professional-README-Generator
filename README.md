@@ -1,7 +1,7 @@
-# Readme Generator
+# ? Professional README Generator
 
 ## Description
-it generats a readme using nodejs
+Application generats a README using nodejs
 
 ## Table of Contents
 - [Installation](#installation)
@@ -13,16 +13,16 @@ it generats a readme using nodejs
 - [Video Demonstration](#video-demonstration)
 
 ## Installation
-no installation instructions
+No installation instructions
 
 ## Usage
-follow prompts and enter information to generate readme
+Follow prompts and enter information to generate readme
 
 ## Contributing
-anyone can contribute
+Anyone can contribute
 
 ## Tests
-no test instructions
+No test instructions
 
 ## License
 Project is covered under the MIT license  
@@ -33,4 +33,4 @@ Direct any quetsions to AlexLenson at https://github.com/AlexLenson
 For additional questions, email me at test@gmail.com
 
 ## Video Demonstration
-See a video demonstration: [Watch Video](https://drive.google.com/your_shareable_link_here)
+See a video demonstration: [Watch Video](https://drive.google.com/file/d/11g129cH3oy8SUJBek0EY4qKmpz-7q6of/view)

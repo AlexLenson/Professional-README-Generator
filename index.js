@@ -38,7 +38,7 @@ Direct any quetsions to ${username} at https://github.com/${username}
 For additional questions, email me at ${email}
 
 ## Video Demonstration
-See a video demonstration: [Watch Video](https://drive.google.com/your_shareable_link_here)`;
+See a video demonstration: [Watch Video](https://drive.google.com/file/d/11g129cH3oy8SUJBek0EY4qKmpz-7q6of/view)`;
 
 inquirer
     .prompt([
