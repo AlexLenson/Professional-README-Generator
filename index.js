@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 
-const generateREADME = ({ title, description, install, usage, contribution, test, license, username, profile, email }) =>
+const generateREADME = ({ title, description, install, usage, contribution, test, license, username, email, badge }) =>
 `# ${title}
 
 ## Description
@@ -30,10 +30,11 @@ ${contribution}
 ${test}
 
 ## License
-Project is covered under the ${license} license
+Project is covered under the ${license} license  
+${badge}
 
 ## Questions
-Direct any quetsions to ${username} at ${profile}.
+Direct any quetsions to ${username} at https://github.com/${username}  
 For additional questions, email me at ${email}
 
 ## Video Demonstration
@@ -72,10 +73,10 @@ inquirer
             message: 'What are the test instructions of your project?',
         },
         {
-            type: 'input',
+            type: 'list',
             name: 'license',
             message: 'What is the license for your project?',
-            choices: ['Red', 'Blue', 'Green', 'Yellow', 'Purple', 'Orange'],
+            choices: ['Apache', 'GNU', 'MIT'],
 
         },
         {
@@ -90,8 +91,16 @@ inquirer
         },
     ])
     .then((answers) => {
+        if (answers.license === "Apache") {
+            answers.badge = `[![License](https://img.shields.io/badge/License-Apache%202.0-blue)](https://www.apache.org/licenses/LICENSE-2.0)`;
+        } else if (answers.license === "GNU") {
+            answers.badge = `[![License](https://img.shields.io/badge/License-GPL%20v3-blue)](https://www.gnu.org/licenses/gpl-3.0.en.html)`;
+        } else if (answers.license === "MIT") {
+            answers.badge = `[![License](https://img.shields.io/badge/License-MIT-brightgreen)](https://opensource.org/licenses/MIT)`;
+        } else {
+            answers.badge = "";
+        }
         const readmeContent = generateREADME(answers);
-
         fs.writeFile('README.md', readmeContent, (err) =>
             err ? console.log(err) : console.log('Successfully created README.md!')
         );

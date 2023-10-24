@@ -25,11 +25,12 @@ anyone can contribute
 no test instructions
 
 ## License
-Project is covered under the MIT license
+Project is covered under the MIT license  
+[![License](https://img.shields.io/badge/License-MIT-brightgreen)](https://opensource.org/licenses/MIT)
 
 ## Questions
-Direct any quetsions to AlexLenson at undefined
-For additional questions, email me at laksjdf@asdf.com
+Direct any quetsions to AlexLenson at https://github.com/AlexLenson  
+For additional questions, email me at test@gmail.com
 
 ## Video Demonstration
 See a video demonstration: [Watch Video](https://drive.google.com/your_shareable_link_here)
